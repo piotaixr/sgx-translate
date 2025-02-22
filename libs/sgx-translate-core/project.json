@@ -1,0 +1,36 @@
+{
+  "name": "sgx-translate-core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sgx-translate-core/src",
+  "prefix": "sgx-translate",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/sgx-translate-core/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/sgx-translate-core/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/sgx-translate-core/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/sgx-translate-core/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
