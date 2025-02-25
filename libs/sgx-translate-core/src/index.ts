@@ -1,1 +1,15 @@
-export * from './lib/sgx-translate-core/sgx-translate-core.component';
+export * from './lib/translate.service';
+export { provideSgxTranslate } from './lib/providers';
+export { useKeyAsMissingTranslation } from './lib/providers';
+export { withTranslationLoader } from './lib/providers';
+export { withDefaultLanguage } from './lib/providers';
+export { TranslationLoader } from './lib/providers';
+export { withLoader } from './lib/providers';
+export { withRemoteTranslation } from './lib/providers';
+export { withStaticLanguageValues } from './lib/providers';
+export { provideLocalTranslations } from './lib/providers';
+export { TranslatePipe } from './lib/translate.pipe';
+export { CurrentLanguageService } from './lib/current-language.service';
+export { KeyAsMissingTranslationHandler } from './lib/missing-translation-handler';
+export { MissingTranslationHandler } from './lib/missing-translation-handler';
+export { MissingTranslationHandler } from './lib/missing-translation-handler';
